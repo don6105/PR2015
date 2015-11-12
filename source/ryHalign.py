@@ -25,11 +25,6 @@ def os_system(cmd):
     #真正執行命令在此！
     status= os.system(cmd)
     logging.debug(cmd)
-    #os.system('echo "(globalCmdNum, status, cmd)= %03d, %d,----> %s"'%(globalCmdNum, status, cmd))
-
-    #後端繼續蒐集 error 或 warning 訊息
-    #print( '(globalCmdNum, status, cmd)= %03d, %d,----> %s '%(globalCmdNum, status, cmd))
-    #globalCmdNum +=1
     
     return status
 
