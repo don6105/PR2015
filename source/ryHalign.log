@@ -1,0 +1,19 @@
+[ 2015 Nov 12 15:17:32 ] ryHalign.py:092 [INFO] : Generate 4 scp files: genScpFiles() Success!
+[ 2015 Nov 12 15:17:32 ] ryHalign.py:171 [INFO] : Build 'myHmmPro' file success
+[ 2015 Nov 12 15:17:32 ] ryHalign.py:266 [INFO] : htk00() success
+[ 2015 Nov 12 15:17:32 ] ryHalign.py:281 [INFO] : lst2dic() success
+[ 2015 Nov 12 15:17:32 ] ryHalign.py:287 [INFO] : htk01() success
+[ 2015 Nov 12 15:17:33 ] ryHalign.py:027 [DEBUG] : HCopy -A -C hCopy.conf -S spWav2Mfc.scp
+[ 2015 Nov 12 15:17:33 ] ryHalign.py:027 [DEBUG] : mkdir hmms_p
+[ 2015 Nov 12 15:17:33 ] ryHalign.py:027 [DEBUG] : HCompV -A -C hInit.conf -S spMfc.scp -m -I spLab_p.mlf -M hmms_p/ -o myHCompV myHmmPro
+[ 2015 Nov 12 15:17:34 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p/ spLab_p.lst
+[ 2015 Nov 12 15:17:35 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p/ -d hmms_p/ spLab_p.lst hmms_p/HER1.acc
+[ 2015 Nov 12 15:17:36 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p/ spLab_p.lst
+[ 2015 Nov 12 15:17:36 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p/ -d hmms_p/ spLab_p.lst hmms_p/HER1.acc
+[ 2015 Nov 12 15:17:37 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p/ spLab_p.lst
+[ 2015 Nov 12 15:17:38 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p/ -d hmms_p/ spLab_p.lst hmms_p/HER1.acc
+[ 2015 Nov 12 15:17:39 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p/ spLab_p.lst
+[ 2015 Nov 12 15:17:39 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p/ -d hmms_p/ spLab_p.lst hmms_p/HER1.acc
+[ 2015 Nov 12 15:17:40 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p/ spLab_p.lst
+[ 2015 Nov 12 15:17:40 ] ryHalign.py:027 [DEBUG] : HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p/ -d hmms_p/ spLab_p.lst hmms_p/HER1.acc
+[ 2015 Nov 12 15:17:41 ] ryHalign.py:027 [DEBUG] : HVite -A -C hVite.conf  -S spMfc.scp  -a -d hmms_p/ -i spLab_aligned.mlf -I spLab.mlf spLab_p.dic spLab_p.lst
