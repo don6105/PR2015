@@ -186,20 +186,20 @@ def htk00_製造各個HtkTool所需的參數檔():
 	SOURCERATE     = 625        # T=625e-7 sec ==> Fs = 16KHz
 	TARGETRATE     = 100000      # 10 ms
 	
-    ENORMALISE=F   # for realtime test
-    '''
+    	ENORMALISE=F   # for realtime test
+    	'''
      
 	hInit_conf='''
-    TARGETKIND = MFCC_0_D_A
-    SAVEGLOBOPTS = TRUE
-    KEEPDISTINCT=F
-    '''
+    	TARGETKIND = MFCC_0_D_A
+    	SAVEGLOBOPTS = TRUE
+    	KEEPDISTINCT=F
+	'''
     
 	hRest_conf='''
-    TARGETKIND = MFCC_0_D_A
-    SAVEGLOBOPTS = TRUE
-    KEEPDISTINCT=F
-    '''
+    	TARGETKIND = MFCC_0_D_A
+    	SAVEGLOBOPTS = TRUE
+    	KEEPDISTINCT=F
+    	'''
     
 	hErest_conf='''
 	TARGETKIND = MFCC_0_D_A
