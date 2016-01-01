@@ -15,7 +15,6 @@
   * Introduction:
     <br>&nbsp;&nbsp;&nbsp;&nbsp;
     Using sklearn.svm recognize digit image which are downloaded from MNIST database.
-<br><br>
 * Contact
   <pre>
   Prof:   Renyuan Lyu
