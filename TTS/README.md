@@ -59,3 +59,9 @@ Given a test as input, get voice from Google TTS(Text to Speech). Training voice
       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or<br>&nbsp;&nbsp; 
       `$ python3 ryHailgn.py -d wavDir` (given a directory of wav file)
 <br><br>
+
+* Contact
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+Author: Jin Ye
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+E-mail: don0910129285@gmail.com
