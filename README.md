@@ -1,11 +1,5 @@
 # Pattern Recognition 2015
 
-* Contact
-  * Prof:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Renyuan Lyu <br>
-  * E-mail:  &nbsp;&nbsp;renyuan.lyu@gmail.com
-  * Author: &nbsp;Ye Jin <br>
-  * E-mail:  &nbsp;&nbsp;&nbsp;don0910129285@gmail.com
-<br><br>
 * TTS
   * Language:
     <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -21,4 +15,15 @@
   * Introduction:
     <br>&nbsp;&nbsp;&nbsp;&nbsp;
     Using sklearn.svm recognize digit image which are downloaded from MNIST database.
+<br><br>
+* Contact
+  <pre>
+  Prof:   Renyuan Lyu
+  E-mail: renyuan.lyu@gmail.com
   
+  Author: Jin Ye
+  E-mail: don0910129285@gmail.com
+  </pre>
+
+
+
