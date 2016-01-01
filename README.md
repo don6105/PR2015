@@ -18,10 +18,10 @@
 * Contact
   <pre>
   Prof:   Renyuan Lyu
-  E-mail: renyuan.lyu@gmail.com
+  E-mail: <a href='mailto:renyuan.lyu@gmail.com'>renyuan.lyu@gmail.com</a>
   
   Author: Jin Ye
-  E-mail: don0910129285@gmail.com
+  E-mail: <a href='mailto:don0910129285@gmail.com'>don0910129285@gmail.com</a>
   </pre>
 
 
