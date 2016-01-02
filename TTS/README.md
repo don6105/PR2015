@@ -1,6 +1,6 @@
 * Introduction
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-Given a test as input, get voice from Google TTS(Text to Speech). Training voice data by HTK and produce text which contain sentences and timestamp.
+Given a text as input, get voice from Google TTS(Text to Speech). Training voice data by HTK and produce text which contain sentences and timestamp.
 <br><br>
 * OS
   * ubuntu 14.04 64-bit with kernel 3.19.0
