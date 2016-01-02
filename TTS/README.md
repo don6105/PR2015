@@ -23,7 +23,7 @@ Given a text as input, get voice from Google TTS(Text to Speech). Training voice
     <br>&nbsp;&nbsp;&nbsp;&nbsp;
     `$ sudo pip3 install scipy`
   * HTK 3.4.1
-    1. Go to http://htk.eng.cam.ac.uk and register account
+    1. Go to http://htk.eng.cam.ac.uk and register an account
     2. Download source code of Linux version
     3. Decompress and compile it
     <br>&nbsp;&nbsp;&nbsp;
