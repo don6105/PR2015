@@ -25,6 +25,7 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
   * pylab 0.1.3
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   `$ sudo pip3 install pylab`
+<br><br>
 * Usage
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
  `$ python3 MnistClassifiers.py`
