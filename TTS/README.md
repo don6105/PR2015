@@ -12,7 +12,7 @@ Given a text as input, get voice from Google TTS(Text to Speech). Training voice
   * Scipy 0.13.3
   * HTK 3.4.1
   * FFmpeg 2.8.1
-<br><br>
+  <br><br>
 * Installion
   * Python 3.4.3
     <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -22,7 +22,8 @@ Given a text as input, get voice from Google TTS(Text to Speech). Training voice
     `$ sudo pip3 install gtts`
   * Scipy 0.13.3
     <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    `$ sudo pip3 install scipy`
+    `$ sudo pip3 install scipy
+`
   * HTK 3.4.1
     1. Go to http://htk.eng.cam.ac.uk and register an account
     2. Download source code of Linux version
