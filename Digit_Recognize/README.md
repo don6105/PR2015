@@ -12,7 +12,7 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
   * sklearn 0.17
   * pylab 0.1.3
   <br><br>
-* Installion
+* Installation
   * Python 3.4.3
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   `$ sudo apt-get install python3`
