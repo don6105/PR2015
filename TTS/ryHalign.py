@@ -539,12 +539,11 @@ def 清理垃圾(dirName):
         logging.debug(e)
 
     #remove "dirName" folder and it's child
-    '''
+    
     try:
         shutil.rmtree(dirName)
     except IOError as e:
         logging.debug(e)
-    '''
 
 if __name__=='__main__':
     主程式()
