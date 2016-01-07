@@ -27,7 +27,7 @@ def logging_init():
 
 def genScpFiles(dirName):
 	'''
-	產生 4 個 .scp 檔案：
+	產生 4 個 .scp 檔案：.log
 		spWav.scp, spLab.scp, spMfc.scp, spWav2Mfc.scp
 	'''
 	if os.path.exists(dirName):
@@ -44,7 +44,7 @@ def genScpFiles(dirName):
 		if wavScp!='' and mfcScp!='':
 			for w,m in zip(wavScp.split('\n'), mfcScp.split('\n')):
 				wmScp += w+'\t'+m+'\n'
-    
+
 		lost_file = []
 
 		if wavScp!='':
@@ -88,7 +88,7 @@ def genScpFiles(dirName):
 			logging.info("Generate 4 files: genScpFiles() Success ...")
 			return True
 	else:
-		logging.error('No such directory as ' + dirName + '.')	
+		logging.error('No such directory as ' + dirName + '.')
 
 def 建立Hmm原型(N=1, M=1, D=39, fileName=''):
     '''
@@ -279,11 +279,11 @@ def htk00_製造各個HtkTool所需的參數檔():
 def htk01_處裡語音標籤及詞典():
 	if os.path.exists('spLab.scp') and os.path.exists('hLed00.led') and os.path.exists('hLed.led'):
 		try:
-			cmd = 'HLEd -A -i spLab00.mlf -n spLab00.lst -S spLab.scp  hLed00.led >> HLEd.log'
+			cmd = 'HLEd -A -i spLab00.mlf -n spLab00.lst -S spLab.scp  hLed00.led >> HTK.log'
 			subprocess.check_call( [cmd], shell=True )
 			logging.debug(cmd)
-			
-			cmd = 'HLEd -A -i spLab.mlf -n spLab.lst -S spLab.scp  hLed.led >> HLEd.log'
+
+			cmd = 'HLEd -A -i spLab.mlf -n spLab.lst -S spLab.scp  hLed.led >> HTK.log'
 			subprocess.check_call( [cmd], shell=True )
 			logging.debug(cmd)
 		except Exception as e:
@@ -291,7 +291,7 @@ def htk01_處裡語音標籤及詞典():
 		else:
 			if lst2dic():
 				try:
-					cmd = 'HLEd -A -i spLab_p.mlf -n spLab_p.lst -S spLab.scp -I spLab.mlf -d spLab_p.dic hLed.led >> HLEd.log'
+					cmd = 'HLEd -A -i spLab_p.mlf -n spLab_p.lst -S spLab.scp -I spLab.mlf -d spLab_p.dic hLed.led >> HTK.log'
 					subprocess.check_call( [cmd], shell=True )
 					logging.debug(cmd)
 				except Exception as e:
@@ -310,7 +310,7 @@ def htk01_處裡語音標籤及詞典():
 	return False
 
 def lst2dic():
-	lost_file = [] 
+	lost_file = []
 	try:
 		with open('spLab.lst') as f:
 			lines = f.readlines()
@@ -356,7 +356,7 @@ def lst2dic():
 	except IOError as e:
 		logging.error(e)
 		lost_file.append('spLab_p.dic')
-    
+
 	if len(lost_file) > 0:
 		logging.error('Need file: ' + ', '.join(lost_file))
 		logging.error("Missing %d files: lst2dic() Failed ...", len(lost_file))
@@ -369,12 +369,12 @@ def lst2dic():
 def htk02_擷取語音特徵及訓練語音模型():
 	if os.path.exists('spWav2Mfc.scp'):
 		try:
-			cmd = 'HCopy -A -C hCopy.conf -S spWav2Mfc.scp >> HCopy.log'
+			cmd = 'HCopy -A -C hCopy.conf -S spWav2Mfc.scp >> HTK.log'
 			subprocess.check_call( [cmd], shell=True )
 			logging.debug(cmd)
 		except Exception as e:
 			logging.error(e)
-			
+
 		try:
 			with open('spLab_p.lst') as f:
 				lines = f.readlines()
@@ -387,7 +387,7 @@ def htk02_擷取語音特徵及訓練語音模型():
 					shutil.rmtree('hmms_p')
 				except Exception as e:
 					logging.error(e)
-				
+
 			try:
 				os.mkdir('hmms_p')
 			except Exception as e:
@@ -397,9 +397,9 @@ def htk02_擷取語音特徵及訓練語音模型():
 				for l in lines:
 					m = l.strip('\n')
 					mList.append(m)
-				
+
 				try:
-					cmd = 'HCompV -A -C hInit.conf -S spMfc.scp -m -I spLab_p.mlf -M hmms_p -o myHCompV myHmmPro >> HCompV.log'
+					cmd = 'HCompV -A -C hInit.conf -S spMfc.scp -m -I spLab_p.mlf -M hmms_p -o myHCompV myHmmPro >> HTK.log'
 					subprocess.check_call( [cmd], shell=True )
 					logging.debug(cmd)
 				except Exception as e:
@@ -418,16 +418,16 @@ def htk02_擷取語音特徵及訓練語音模型():
 									f.write(myModel)
 							except IOError as e:
 								logging.error(e)
-						
+
 						repeat_time = 0
 						for i in range(5):
 							logging.debug('[%d]HERest '%i)
 							try:
-								cmd = 'HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p spLab_p.lst >> HERest.log'
+								cmd = 'HERest -A -C hErest.conf -S spMfc.scp -p 1 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p spLab_p.lst >> HTK.log'
 								subprocess.check_call( [cmd], shell=True )
 								logging.debug(cmd)
-								
-								cmd = 'HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p spLab_p.lst ' + os.path.join('hmms_p', 'HER1.acc') + ' >> HERest.log'
+
+								cmd = 'HERest -A -C hErest.conf -p 0 -t 2000.0 -w 3 -v 0.05 -I spLab_p.mlf -M hmms_p -d hmms_p spLab_p.lst ' + os.path.join('hmms_p', 'HER1.acc') + ' >> HTK.log'
 								subprocess.check_call( [cmd], shell=True )
 								logging.debug(cmd)
 							except Exception as e:
@@ -442,7 +442,7 @@ def htk02_擷取語音特徵及訓練語音模型():
 
 def htk03_語音文字對齊():
 	try:
-		cmd = 'HVite -A -C hVite.conf  -S spMfc.scp  -a -d hmms_p/ -i spLab_aligned.mlf -I spLab.mlf spLab_p.dic spLab_p.lst >> HVite.log'
+		cmd = 'HVite -A -C hVite.conf  -S spMfc.scp  -a -d hmms_p/ -i spLab_aligned.mlf -I spLab.mlf spLab_p.dic spLab_p.lst >> HTK.log'
 		subprocess.check_call( [cmd], shell=True )
 		logging.debug(cmd)
 		logging.debug('generate ‘spLab_aligned.mlf‘')
@@ -456,17 +456,17 @@ def htk03_語音文字對齊():
 
 def 主程式():
 	try:
-		f_index = sys.argv.index('-f')
+		f_index = sys.argv.index('-d')
 	except ValueError as e:
 		dirName = 'wavDir'
 	else:
 		if len(sys.argv) >= f_index+2 and sys.argv[f_index+1][0]!='-':
 			dirName = sys.argv[f_index+1]
 		else:
-			print('ryHalign.py: error: missing filename after ‘-f‘')
-			print('Try \'ryHalign.py -f filename\'.')
+			print('ryHalign.py: error: missing filename after ‘-d‘')
+			print('Try \'ryHalign.py -d wavDir\'.')
 			exit(1)
-	
+
 	logging_init()
 	r = genScpFiles(dirName)
 	if r:
@@ -480,7 +480,7 @@ def 主程式():
 		r = htk03_語音文字對齊()
 	if r:
 		保存結果(dirName)
-	
+
 	清理垃圾(dirName)
 
 def 保存結果(dirName):
@@ -539,11 +539,12 @@ def 清理垃圾(dirName):
         logging.debug(e)
 
     #remove "dirName" folder and it's child
-    
+    '''
     try:
         shutil.rmtree(dirName)
     except IOError as e:
         logging.debug(e)
+    '''
 
 if __name__=='__main__':
     主程式()
