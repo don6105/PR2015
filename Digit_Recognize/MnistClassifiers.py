@@ -114,7 +114,7 @@ def main():
 	get_data()
 
 	global classifier
-	if os.path.isfile(os.path.join('svm-model','svm.pkl.')):
+	if os.path.isfile(os.path.join('svm-model','svm.pkl')):
 		classifier = joblib.load(os.path.join('svm-model','svm.pkl'))
 	else:
 		train()
