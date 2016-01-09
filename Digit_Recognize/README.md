@@ -32,23 +32,37 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
 <br><br>
 * Optimize
   * kernel : rbf, linear, poly, sigmoid. default=rbf
+	  <table>
+	    <tr>
+	      <td></td>
+	      <td>kernel='rbf'</td>
+	      <td>kernel='linear'</td>
+	      <td>kernel='poly'</td>
+	      <td>kernel='sigmoid'</td>
+	    </tr>
+	    <tr>
+	      <td>Avg Precision</td>
+	      <td>0.01</td>
+	      <td>0.91</td>
+	      <td><strong>0.94</strong></td>
+				<td>0.01</td>
+	    </tr>
+	  </table>
+  * C : float. default=1.0
   <table>
     <tr>
       <td></td>
-      <td>kernel='rbf'</td>
-      <td>kernel='linear'</td>
-      <td>kernel='poly'</td>
-      <td>kernel='sigmoid'</td>
+			<td>kernel='poly' C=1.0</td>
+      <td>kernel='poly' C=0.1</td>
+			<td>kernel='poly' C=4.0</td>
     </tr>
     <tr>
-      <td>Precision</td>
-      <td>0.01</td>
-      <td>0.91</td>
-      <td><strong>0.94</strong></td>
-			<td>0.01</td>
+      <td>Avg Precision</td>
+			<td><strong>0.94</strong></td>
+      <td>0.94</td>
+      <td>0.94</td>
     </tr>
   </table>
-  * C : float. default=1.0
   * degree : int. default=3
   * gamma: float. default=auto
   * coef0: float. default=0.0
