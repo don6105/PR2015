@@ -30,7 +30,7 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
  `$ python3 MnistClassifiers.py`
 <br><br>
-* Optimize
+* Parameters Optimize
   * kernel : rbf, linear, poly, sigmoid. default=rbf
 	  <table>
 	    <tr>
