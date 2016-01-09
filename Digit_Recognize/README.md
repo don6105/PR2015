@@ -35,35 +35,51 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
 	  <table>
 	    <tr>
 	      <td></td>
-	      <td>kernel='rbf'</td>
-	      <td>kernel='linear'</td>
-	      <td>kernel='poly'</td>
-	      <td>kernel='sigmoid'</td>
+	      <td><center> kernel='rbf' </center></td>
+	      <td><center> kernel='linear' </center></td>
+	      <td><center> kernel='poly' </center></td>
+	      <td><center> kernel='sigmoid' </center></td>
 	    </tr>
 	    <tr>
-	      <td>Avg Precision</td>
-	      <td>0.01</td>
-	      <td>0.91</td>
-	      <td><strong>0.94</strong></td>
-				<td>0.01</td>
+	      <td><center> Avg Precision </center></td>
+	      <td><center> 0.01 </center></td>
+	      <td><center> 0.91 </center></td>
+	      <td><center> <strong>0.94</strong> </center></td>
+	      <td><center> 0.01 </center></td>
 	    </tr>
 	  </table>
   * C : float. default=1.0
-  <table>
-    <tr>
-      <td></td>
-			<td>kernel='poly' C=1.0</td>
-      <td>kernel='poly' C=0.1</td>
-			<td>kernel='poly' C=4.0</td>
-    </tr>
-    <tr>
-      <td>Avg Precision</td>
-			<td><strong>0.94</strong></td>
-      <td>0.94</td>
-      <td>0.94</td>
-    </tr>
-  </table>
+  	<table>
+  	  <tr>
+  	    <td></td>
+  	    <td><center> kernel='poly' C=1.0 </center></td>
+  	    <td><center> kernel='poly' C=0.1 </center></td>
+  	    <td><center> kernel='poly' C=4.0 </center></td>
+  	  </tr>
+  	  <tr>
+  	    <td><center> Avg Precision </center></td>
+  	    <td><center> <strong>0.94</strong> </center></td>
+  	    <td><center> 0.94 </center></td>
+  	    <td><center> 0.94 </center></td>
+  	  </tr>
+  	</table>
   * degree : int. default=3
+  	<table>
+  	  <tr>
+  	    <td></td>
+  	    <td><center> kernel='poly' degree=3 </center></td>
+  	    <td><center> kernel='poly' degree=1 </center></td>
+  	    <td><center> kernel='poly' degree=2 </center></td>
+  	    <td><center> kernel='poly' degree=4 </center></td>
+  	  </tr>
+  	  <tr>
+  	    <td><center> Avg Precision </center></td>
+  	    <td><center> 0.94 </center></td>
+  	    <td><center> 0.91 </center></td>
+  	    <td><center> <strong>0.95</strong> </center></td>
+  	    <td><center> 0.93 </center></td>
+  	  </tr>
+  	</table>
   * gamma: float. default=auto
   * coef0: float. default=0.0
   * probability : boolean. default=False
