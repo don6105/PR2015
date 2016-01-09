@@ -34,17 +34,18 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
   * kernel : rbf, linear, poly, sigmoid. default=rbf
   <table>
     <tr>
-      <td>Avg</td>
+      <td></td>
       <td>kernel='rbf'</td>
       <td>kernel='linear'</td>
       <td>kernel='poly'</td>
       <td>kernel='sigmoid'</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>Precision</td>
+      <td>0.01</td>
+      <td>0.91</td>
+      <td><strong>0.94</strong></td>
+			<td>0.01</td>
     </tr>
   </table>
   * C : float. default=1.0
