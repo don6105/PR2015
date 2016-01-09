@@ -32,6 +32,21 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
 <br><br>
 * Optimize
   * kernel : rbf, linear, poly, sigmoid. default=rbf
+  <table>
+    <tr>
+      <td>Avg</td>
+      <td>kernel='rbf'</td>
+      <td>kernel='linear'</td>
+      <td>kernel='poly'</td>
+      <td>kernel='sigmoid'</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
   * C : float. default=1.0
   * degree : int. default=3
   * gamma: float. default=auto
@@ -43,7 +58,6 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
   * decision_function_shape : 'ovo', 'ovr' or None. default=None
   * random_state : int seed. default=None
   * tol : float. default=1e-3
-
 <br><br>
 * Contact
   <pre>
