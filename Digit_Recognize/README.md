@@ -81,14 +81,138 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
   	  </tr>
   	</table>
   * gamma: float. default=auto
+   	<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' gamma=auto </td>
+  	    <td> kernel='poly' gamma=0.1 </td>
+  	    <td> kernel='poly' gamma=4.0 </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.94 </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
   * coef0: float. default=0.0
+  	<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' coef0=0.0 </td>
+  	    <td> kernel='poly' coef0=0.1 </td>
+  	    <td> kernel='poly' coef0=4.0 </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.94 </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
   * probability : boolean. default=False
+  	<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' probability=False </td>
+  	    <td> kernel='poly' probability=True </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
   * strinking : boolean. default=True
+  	<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' strinking=True </td>
+  	    <td> kernel='poly' strinking=False </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
   * class_weight : { dict: 'balance' }
+ 		<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' class_weight=balance </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	  </tr>
+  	</table>
   * max_iter : int . default=-1(unlimit)
+ 		<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' max_iter=-1 </td>
+  	    <td> kernel='poly' max_iter=1 </td>
+  	    <td> kernel='poly' max_iter=4 </td>
+  	    <td> kernel='poly' max_iter=100 </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.53 </td>
+  	    <td> 0.54 </td>
+  	    <td> 0.93 </td>
+  	  </tr>
+  	</table>
   * decision_function_shape : 'ovo', 'ovr' or None. default=None
+ 		<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' decision_function_shape=None </td>
+  	    <td> kernel='poly' decision_function_shape='ovo' </td>
+  	    <td> kernel='poly' decision_function_shape='ovr' </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.94 </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
   * random_state : int seed. default=None
+ 		<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' random_state=None </td>
+  	    <td> kernel='poly' random_state=1 </td>
+  	    <td> kernel='poly' random_state=4 </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.94 </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
   * tol : float. default=1e-3
+ 		<table>
+  	  <tr>
+  	    <td></td>
+  	    <td> kernel='poly' tol=1e-3 </td>
+  	    <td> kernel='poly' tol=3.0 </td>
+  	    <td> kernel='poly' tol=2.0 </td>
+  	    <td> kernel='poly' tol=1e-8 </td>
+  	    <td> kernel='poly' tol=1e-12 </td>
+  	  </tr>
+  	  <tr>
+  	    <td> Avg Precision </td>
+  	    <td> <strong>0.94</strong> </td>
+  	    <td> 0.01 </td>
+  	    <td> 0.93 </td>
+  	    <td> 0.94 </td>
+  	    <td> 0.94 </td>
+  	  </tr>
+  	</table>
 <br><br>
 * Contact
   <pre>
