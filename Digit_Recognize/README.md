@@ -30,6 +30,21 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
  `$ python3 MnistClassifiers.py`
 <br><br>
+* Optimize
+  * kernel : rbf, linear, poly, sigmoid. default=rbf
+  * C : float. default=1.0
+  * degree : int. default=3
+  * gamma: float. default=auto
+  * coef0: float. default=0.0
+  * probability : boolean. default=False
+  * strinking : boolean. default=True
+  * class_weight : { dict: 'balance' }
+  * max_iter : int . default=-1(unlimit)
+  * decision_function_shape : 'ovo', 'ovr' or None. default=None
+  * random_state : int seed. default=None
+  * tol : float. default=1e-3
+
+<br><br>
 * Contact
   <pre>
   Prof:   Renyuan Lyu
