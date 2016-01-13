@@ -1,7 +1,7 @@
 # Digit_Recognize
 * Introduction
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-Using sklearn.svm recognize digit image which are downloaded from MNIST database.
+Using sklearn.svm recognize digit image which are downloaded from MNIST database. We get best precision is equaled to <strong>95%</strong> when amount of training set is 6000, and <strong>98%</strong> when amount of training set is 60000.
 <br><br>
 * OS
   * ubuntu 14.04 64-bit with kernel 3.19.0
@@ -31,6 +31,10 @@ Using sklearn.svm recognize digit image which are downloaded from MNIST database
  `$ python3 MnistClassifiers.py`
 <br><br>
 * Parameters Optimize
+	* dataset: 
+		* training [0:60000:10]
+		* testing  [60000:70000:10]
+	<br><br>
   * kernel : rbf, linear, poly, sigmoid. default=rbf
 	  <table>
 	    <tr>
